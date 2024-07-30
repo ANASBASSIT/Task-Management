@@ -7,7 +7,7 @@ use Exception;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Auth;
+
 
 use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
@@ -87,21 +87,7 @@ class AdminController extends Controller
             'message' => 'No admin is logged in',
         ], 401);
     }
-    // public function adrefresh()
-    // {
-    //     try {
-    //         $token = auth('admins')->refresh(); // Specify the JWT guard for admins
-    //         return response()->json([
-    //             'admin' => auth('admins')->user(),
-    //             'token' => $token,
-    //             'type' => 'bearer',
-    //         ]);
-    //     } catch (Exception $e) {
-    //         Log::error($e->getMessage());
-
-    //         return response()->json(['error' => 'Could not refresh token: ' . $e->getMessage()], 500);
-    //     }
-    // }
+  
     public static function getadmin()
     {
         $admin = auth('admins')->user();

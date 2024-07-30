@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\task;
 
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Auth;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 

@@ -6,9 +6,7 @@ use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
-use Illuminate\Support\Facades\Log;
+
 
 
 
@@ -102,21 +100,7 @@ class AuthController extends Controller
         }
     
         
-        // public function refresh()
-        // {
-        //     try {
-        //         $token = auth('api')->refresh(); // Specify the JWT guard
-        //         return response()->json([
-        //             'user' => auth('api')->user(),
-        //             'token' => $token,
-        //             'type' => 'bearer',
-        //         ]);
-        //     } catch (Exception $e) {
-        //         Log::error($e->getMessage());
-
-        //         return response()->json(['error' => 'Could not refresh token: ' . $e->getMessage()], 500);
-        //     }
-        // }
+ 
         
     public static function getUser()
     {
